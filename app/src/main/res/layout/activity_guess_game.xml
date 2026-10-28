@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/game_background">
+
+    <!-- Game header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/game_primary_dark"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvGuessGameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GUESS THE PERSON"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvGuessTimer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TIME: --"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGuessPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="88dp"
+                android:minHeight="48dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="PAUSE"
+                android:textColor="@color/game_primary_dark"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGuessScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Instructions and progress -->
+    <TextView
+        android:id="@+id/tvGuessTurn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="10dp"
+        android:text="Find the secret character"
+        android:textColor="@color/game_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:accessibilityLiveRegion="polite" />
+
+    <TextView
+        android:id="@+id/tvGuessProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:text="24 remaining • 0 questions • 3 guesses left"
+        android:textColor="@color/game_text"
+        android:textSize="14sp" />
+
+    <!-- Category buttons will be added by Java -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:id="@+id/layoutGuessCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvGuessLastAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#E5F5FF"
+        android:padding="12dp"
+        android:text="Choose a category to ask a question. Characters that do not match the answer will be eliminated."
+        android:textColor="@color/game_text"
+        android:textSize="15sp"
+        android:accessibilityLiveRegion="polite" />
+
+    <!-- Character board -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="8dp">
+
+        <GridLayout
+            android:id="@+id/gridGuessGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="false" />
+
+    </ScrollView>
+
+    <!-- Guess controls stay below the board -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvGuessSelectedCandidate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Tap a remaining character to prepare your guess"
+            android:textColor="@color/game_text"
+            android:textSize="14sp"
+            android:accessibilityLiveRegion="polite" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGuessSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#F97316"
+            android:enabled="false"
+            android:alpha="0.45"
+            android:text="MAKE FINAL GUESS"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGuessNextTurn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@color/game_primary_dark"
+            android:text="PASS PHONE"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

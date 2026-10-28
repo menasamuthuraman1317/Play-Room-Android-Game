@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/game_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/game_primary_dark"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvEscapeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ESCAPE THE GRID"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvEscapeTimer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TIME: --"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEscapePause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="88dp"
+                android:minHeight="48dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="PAUSE"
+                android:textColor="@color/game_primary_dark"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/layoutEscapeContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvEscapeTurn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Find your way to the exit"
+                android:textColor="@color/game_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEscapeMoves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Moves: 0"
+                android:textColor="@color/game_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEscapeFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#E5F5FF"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Move the orange marker to EXIT. Dark blue cells are walls."
+                android:textColor="@color/game_text"
+                android:textSize="15sp"
+                android:accessibilityLiveRegion="polite" />
+
+            <GridLayout
+                android:id="@+id/gridEscapeMaze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="5"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Use the arrows to move"
+                android:textColor="@color/game_text"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEscapeUp"
+                android:layout_width="72dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/game_primary_dark"
+                android:contentDescription="Move up"
+                android:text="↑"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEscapeLeft"
+                    android:layout_width="72dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="@color/game_primary_dark"
+                    android:contentDescription="Move left"
+                    android:text="←"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEscapeDown"
+                    android:layout_width="72dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="@color/game_primary_dark"
+                    android:contentDescription="Move down"
+                    android:text="↓"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEscapeRight"
+                    android:layout_width="72dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="@color/game_primary_dark"
+                    android:contentDescription="Move right"
+                    android:text="→"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

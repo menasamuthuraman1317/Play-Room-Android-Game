@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#40FFFFFF">
+
+    <item>
+        <layer-list>
+
+            <!-- Bottom edge adds depth -->
+            <item android:top="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#922458" />
+                    <corners android:radius="14dp" />
+                </shape>
+            </item>
+
+            <!-- Pink button surface -->
+            <item android:bottom="4dp">
+                <shape android:shape="rectangle">
+
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#F477AD"
+                        android:endColor="#CE3979" />
+
+                    <stroke
+                        android:width="1dp"
+                        android:color="#FFA8CF" />
+
+                    <corners android:radius="14dp" />
+
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+
+</ripple>

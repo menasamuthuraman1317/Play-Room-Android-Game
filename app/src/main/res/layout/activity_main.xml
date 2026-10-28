@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070C12"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/bg_dashboard_panel"
+            android:padding="22dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PLAYROOM"
+                android:textColor="#F0D5AC"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="GAME MENU"
+                android:textColor="#C5D7E5"
+                android:textSize="14sp"
+                android:letterSpacing="0.18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="22dp"
+                android:background="#977347" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cardMathRush"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_dashboard_button"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="Math Rush"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:shadowColor="#061522"
+                android:shadowDy="2"
+                android:shadowRadius="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cardGuessPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_dashboard_button"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="Guess the Person"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:shadowColor="#061522"
+                android:shadowDy="2"
+                android:shadowRadius="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cardMemoryDetective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_dashboard_button"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="Memory Detective"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:shadowColor="#061522"
+                android:shadowDy="2"
+                android:shadowRadius="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cardColourClash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_dashboard_button"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="Colour Clash"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:shadowColor="#061522"
+                android:shadowDy="2"
+                android:shadowRadius="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cardEscapeGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_dashboard_button"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="Escape the Grid"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:shadowColor="#061522"
+                android:shadowDy="2"
+                android:shadowRadius="2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:background="#977347" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLeaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:background="@drawable/bg_dashboard_button"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="Leaderboard"
+                android:textAllCaps="false"
+                android:textColor="#FFE1A6"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:shadowColor="#061522"
+                android:shadowDy="2"
+                android:shadowRadius="2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="FIVE GAMES • SURVIVAL &amp; DUEL"
+                android:textColor="#B8C9D8"
+                android:textSize="11sp"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyApplication"
+        parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/game_primary</item>
+        <item name="colorPrimaryDark">@color/game_primary_dark</item>
+        <item name="colorAccent">@color/game_accent</item>
+
+        <item name="android:windowBackground">@color/game_background</item>
+        <item name="android:statusBarColor">@color/game_primary_dark</item>
+        <item name="android:navigationBarColor">@color/game_primary_dark</item>
+
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowActionModeOverlay">true</item>
+
+    </style>
+
+</resources>

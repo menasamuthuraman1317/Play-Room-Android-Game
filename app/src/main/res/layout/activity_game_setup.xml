@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/game_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/game_primary"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_previous"
+            app:tint="@color/game_surface"
+            android:contentDescription="Back to dashboard" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Math Rush"
+            android:textColor="@color/game_surface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/ivGameArtwork"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tvGameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Math Rush"
+                android:textColor="@color/game_primary_dark"
+                android:textSize="32sp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvGameTagline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Think fast. Solve more!"
+                android:textColor="@color/game_text"
+                android:textSize="16sp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp"
+                android:text="Choose your mode"
+                android:textColor="@color/game_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgGameMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/rbSurvival"
+                android:baselineAligned="false">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbSurvival"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="112dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_mode_selector"
+                    android:backgroundTint="@null"
+                    app:backgroundTint="@null"
+                    android:button="@null"
+                    app:buttonCompat="@null"
+                    android:drawableTop="@drawable/ic_mode_survival"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Survival\nOne Player"
+                    android:textColor="@color/game_mode_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbDuel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="112dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_mode_selector"
+                    android:backgroundTint="@null"
+                    app:backgroundTint="@null"
+                    android:button="@null"
+                    app:buttonCompat="@null"
+                    android:drawableTop="@drawable/ic_mode_duel"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Duel\nTwo Players"
+                    android:textColor="@color/game_mode_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvModeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:minHeight="72dp"
+                android:text="Solve calculations before time runs out; correct answers add time."
+                android:textColor="@color/game_text"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_primary_button"
+                android:backgroundTint="@null"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/game_surface"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnHowToPlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_game_card"
+                android:backgroundTint="@null"
+                android:text="How to Play"
+                android:textAllCaps="false"
+                android:textColor="@color/game_primary_dark"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_game_card"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Game highlights"
+                    android:textColor="@color/game_primary_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvGameSkills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Skills: Mental maths, speed and accuracy"
+                    android:textColor="@color/game_text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvGameDifficulty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Difficulty: Progressive"
+                    android:textColor="@color/game_text"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

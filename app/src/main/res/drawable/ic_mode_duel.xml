@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="@color/game_mode_text">
+
+    <!-- Player heads -->
+    <path
+        android:fillColor="#005CB8"
+        android:pathData="M8,4a3,3 0,1 0,0 6a3,3 0,1 0,0 -6" />
+
+    <path
+        android:fillColor="#005CB8"
+        android:pathData="M17,5a3,3 0,1 0,0 6a3,3 0,1 0,0 -6" />
+
+    <!-- Player bodies -->
+    <path
+        android:fillColor="#005CB8"
+        android:pathData="M8,12c-3.87,0 -7,1.79 -7,4v4h14v-4c0,-2.21 -3.13,-4 -7,-4z" />
+
+    <path
+        android:fillColor="#005CB8"
+        android:pathData="M17,13c-0.44,0 -0.87,0.02 -1.28,0.07c0.83,0.83 1.28,1.83 1.28,2.93v4h6v-3c0,-2.21 -2.69,-4 -6,-4z" />
+
+</vector>

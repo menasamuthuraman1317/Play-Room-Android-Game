@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:background="@drawable/bg_escape_cell"
+    android:gravity="center"
+    android:padding="2dp"
+    android:textColor="#F97316"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:clickable="false"
+    android:focusable="false"
+    android:importantForAccessibility="yes" />
